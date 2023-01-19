@@ -14,13 +14,10 @@ def draw_snail():
     snail.goto(-200, 0)
     snail.pd()
     while counter < 26:
-        # if counter in range(17,19):
-        #     print(snail.pos())
         snail.fd(15 + x)
         snail.lt(40)
         counter += 1
         x += 4
-    #pos = (-315.6, -71.87)
     counter = 0
     snail.goto(-236, -98.91)
     snail.pu()
@@ -36,10 +33,8 @@ def draw_snail():
     while counter < 20:
         if counter in range(3, 6):
             snail.pu()
-            # print(snail.pos())
         elif counter in range(15, 18):
             snail.pu()
-            # print(snail.pos())
         else:
             snail.pd()
         snail.fd(4.2)
@@ -99,7 +94,5 @@ def draw_snail():
 if __name__ == '__main__':
     draw_snail()
     snail.hideturtle()
-    #https://cloudconvert.com/eps-to-svg
-    #rename following with your file name but add the .eps at the end
     snail.getscreen().getcanvas().postscript(file = "snowflake.eps")
     my_win.exitonclick()
